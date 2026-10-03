@@ -13,7 +13,7 @@ interface DOMNodeListServiceInterface
      * Psalm/phpstan conflict.
      *
      * @psalm-suppress TooManyTemplateParams
-     * @param \DOMNodeList<\DOMNode> $domNodeList
+     * @param \DOMNodeList<\DOMNameSpaceNode|\DOMNode> $domNodeList
      */
     public function getFirstDOMElementFromDOMNodeList(DOMNodeList $domNodeList): ?DOMElement;
 }
