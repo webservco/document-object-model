@@ -6,6 +6,7 @@ namespace WebServCo\DocumentObjectModel\Service\DOMNodeList;
 
 use DOMElement;
 use DOMNodeList;
+use Override;
 use WebServCo\DocumentObjectModel\Contract\DOMNodeList\DOMNodeListServiceInterface;
 
 final class DOMNodeListService implements DOMNodeListServiceInterface
@@ -16,6 +17,7 @@ final class DOMNodeListService implements DOMNodeListServiceInterface
      * @psalm-suppress TooManyTemplateParams
      * @param \DOMNodeList<\DOMNode> $domNodeList
      */
+    #[Override]
     public function getFirstDOMElementFromDOMNodeList(DOMNodeList $domNodeList): ?DOMElement
     {
         /**

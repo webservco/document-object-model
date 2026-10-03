@@ -8,6 +8,7 @@ use DOMElement;
 use DOMNodeList;
 use DOMXPath;
 use Generator;
+use Override;
 use UnexpectedValueException;
 use WebServCo\DocumentObjectModel\Contract\DOMNodeList\DOMNodeListServiceInterface;
 use WebServCo\DocumentObjectModel\Contract\DOMXPath\DOMXPathServiceInterface;
@@ -18,6 +19,7 @@ final class DOMXPathService implements DOMXPathServiceInterface
     {
     }
 
+    #[Override]
     public function getFirstDOMElementFromDOMXPath(DOMXPath $domXPath, string $query): ?DOMElement
     {
         /**
@@ -38,6 +40,7 @@ final class DOMXPathService implements DOMXPathServiceInterface
     /**
      * @return \Generator<\DOMElement>
      */
+    #[Override]
     public function iterateDOMElementsFromDOMXPath(DOMXPath $domXPath, string $query): Generator
     {
         /**

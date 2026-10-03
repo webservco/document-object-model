@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace WebServCo\DocumentObjectModel\Container;
 
+use Override;
 use WebServCo\DocumentObjectModel\Contract\Container\DOMServiceContainerInterface;
 use WebServCo\DocumentObjectModel\Contract\DOMDocument\DOMDocumentServiceInterface;
 use WebServCo\DocumentObjectModel\Contract\DOMElement\DOMElementServiceInterface;
@@ -21,6 +22,7 @@ final class DOMServiceContainer implements DOMServiceContainerInterface
     private ?DOMNodeListServiceInterface $domNodeListService = null;
     private ?DOMXPathServiceInterface $domXPathService = null;
 
+    #[Override]
     public function getDOMDocumentService(): DOMDocumentServiceInterface
     {
         if ($this->domDocumentService === null) {
@@ -30,6 +32,7 @@ final class DOMServiceContainer implements DOMServiceContainerInterface
         return $this->domDocumentService;
     }
 
+    #[Override]
     public function getDOMElementService(): DOMElementServiceInterface
     {
         if ($this->domElementService === null) {
@@ -39,6 +42,7 @@ final class DOMServiceContainer implements DOMServiceContainerInterface
         return $this->domElementService;
     }
 
+    #[Override]
     public function getDOMNodeListService(): DOMNodeListServiceInterface
     {
         if ($this->domNodeListService === null) {
@@ -48,6 +52,7 @@ final class DOMServiceContainer implements DOMServiceContainerInterface
         return $this->domNodeListService;
     }
 
+    #[Override]
     public function getDOMXPathService(): DOMXPathServiceInterface
     {
         if ($this->domXPathService === null) {

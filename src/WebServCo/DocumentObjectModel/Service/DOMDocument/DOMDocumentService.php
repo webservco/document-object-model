@@ -6,11 +6,13 @@ namespace WebServCo\DocumentObjectModel\Service\DOMDocument;
 
 use DOMDocument;
 use DOMElement;
+use Override;
 use UnexpectedValueException;
 use WebServCo\DocumentObjectModel\Contract\DOMDocument\DOMDocumentServiceInterface;
 
 final class DOMDocumentService implements DOMDocumentServiceInterface
 {
+    #[Override]
     public function createDOMDocumentFromDOMElement(DOMElement $domElement): DOMDocument
     {
         $domDocument = new DOMDocument();
