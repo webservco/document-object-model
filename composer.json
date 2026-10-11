@@ -20,7 +20,7 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
-    "description" : "A PHP component/library.",
+    "description" : "A PHP component/library. Typed helpers around PHP's DOM classes, for parsing XML and HTML without an instanceof check after every XPath query.",
     "homepage" : "https://webserv.co",
     "keywords" : [
         "component",
